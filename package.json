@@ -2,10 +2,23 @@
   "name": "assistant-wechaty",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.ts",
   "scripts": {
+    "start": "node src/main.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/qrcode": "^1.5.0",
+    "axios": "^1.3.4",
+    "node-schedule": "^2.1.1",
+    "qrcode": "^1.5.1",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat": "^1.18.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
 }
