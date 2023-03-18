@@ -448,6 +448,13 @@
   "resolved" "https://registry.npmmirror.com/@types/ms/-/ms-0.7.31.tgz"
   "version" "0.7.31"
 
+"@types/node-schedule@^2.1.0":
+  "integrity" "sha512-NiTwl8YN3v/1YCKrDFSmCTkVxFDylueEqsOFdgF+vPsm+AlyJKGAo5yzX1FiOxPsZiN6/r8gJitYx2EaSuBmmg=="
+  "resolved" "http://npm.kf315.net/@types%2fnode-schedule/-/node-schedule-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@types/node" "*"
+
 "@types/node@*", "@types/node@>=12.12.47", "@types/node@>=13.7.0":
   "integrity" "sha512-p6ua9zBxz5otCmbpb5D3U4B5Nanw6Pk3PPyX05xnxbB/fRv71N7CPmORg7uAD5P70T0xmx1pzAx/FUfa5X+3cw=="
   "resolved" "https://registry.npmmirror.com/@types/node/-/node-18.15.3.tgz"
