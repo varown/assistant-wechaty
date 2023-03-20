@@ -1,0 +1,9 @@
+version: '3'
+services:
+  assistant-wechat:
+    image: assistant-wechat
+    build: .
+    volumes:
+      - ./data/assistant-wechat.memory-card.json:/app/assistant-wechat.memory-card.json
+    env_file:
+      - .env
