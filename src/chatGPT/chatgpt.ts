@@ -1,10 +1,19 @@
-import { config } from "../config.js";
+import { config, Proxy } from "../config.js";
+import { request, ProxyAgent, Agent } from "undici";
 
-let apiKey = config.openai_api_key;
-let model = config.model;
+const apiKey = config.openai_api_key;
+const model = config.model;
+
+const dispatcher = Proxy ?
+  new ProxyAgent(Proxy) :
+  new Agent({
+    bodyTimeout: 0,
+    headersTimeout: 0,
+  });
+  
 const sendMessage = async (message: string) => {
   try {
-    const response = await fetch(`https://api.openai.com/v1/chat/completions`, {
+    const { body } = await request(`https://api.openai.com/v1/chat/completions`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -12,6 +21,7 @@ const sendMessage = async (message: string) => {
       },
       body: JSON.stringify({
         model: model,
+        dispatcher,
         messages: [
           {
             "role": "user",
@@ -21,8 +31,8 @@ const sendMessage = async (message: string) => {
         temperature: 0.6
       }),
     });
-    return response.json()
-      .then((data) => data.choices[0].message.content);
+    return body.json()
+      .then((data: any) => data.choices[0].message.content);
   } catch (e) {
     console.error(e)
     return "Something went wrong"
