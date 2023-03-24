@@ -7,10 +7,10 @@ const name = 'assistant-wechat'
 
 export const bot = WechatyBuilder.build({
   name,
-  puppet: 'wechaty-puppet-wechat',
-  puppetOptions: {
-    uos: true  // 开启uos协议
-  },
+  // puppet: 'wechaty-puppet-wechat',
+  // puppetOptions: {
+  //   uos: true  // 开启uos协议
+  // },
 })
 
 const main = async () => {
