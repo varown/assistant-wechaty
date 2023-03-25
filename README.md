@@ -10,6 +10,7 @@
 
 - [x] 通过 [wechaty](https://github.com/varown/assistant-wechaty.git) 和 [官方 API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)，将 ChatGPT 接入微信
 - [x] 加入了持续对话的功能
+- [x] 支持科学上网，env 配置 `Proxy` 即可
 - [x] 加入 Dockerfile, 通过 [Docker](#通过docker使用-推荐) 进行部署
 - [x] 使用[docker compose](#通过docker-compose使用-推荐)进行部署
 
