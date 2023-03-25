@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to assistant-wechat</h1>
+<h1 align="center">Welcome to assistant-wechaty</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
@@ -29,7 +29,7 @@ vim .env
 # Start the container
 docker-compose up -d
 # View the QR code to log in to wechat
-docker logs -f assistant-wechat
+docker logs -f assistant-wechaty
 ```
 
 ## Use with nodejs
