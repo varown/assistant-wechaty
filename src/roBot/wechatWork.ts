@@ -5,6 +5,10 @@ const weWorkBotKey = process.env.WEWORK_BOT_KEY || WEWORK_BOT_KEY
 
 
 export async function sendWechatWorkMessage(message: any) {
+  if (!weWorkBotKey) {
+    console.log('未配置企业微信机器人，无法发送通知！');
+    return;
+  }
   const client = new Client('https://qyapi.weixin.qq.com');
 
   try {
